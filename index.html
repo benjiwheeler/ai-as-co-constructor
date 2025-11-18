@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>This Way of Life – Versions</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+      }
+      .version-block {
+        margin-bottom: 2rem;
+      }
+      iframe.game-frame {
+        border: none;
+        display: block;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This Way of Life – Version Gallery</h1>
+
+    <div class="version-block">
+      <h2>Version 1.4 (d6de5cb)</h2>
+      <iframe
+        class="game-frame"
+        src="past-versions/1.4.d6de5cb/"
+        scrolling="no"
+      ></iframe>
+    </div>
+
+    <!-- Repeat blocks for other versions -->
+
+    <script>
+      function normalizeIframeToCanvas(iframe) {
+        try {
+          const win = iframe.contentWindow;
+          const doc = win.document;
+          if (!doc) return;
+
+          let canvas = doc.querySelector("canvas");
+          if (!canvas) return;
+
+          // Make sure the game has had a moment to initialize/layout
+          // (if needed, you can wrap the rest in a small setTimeout)
+          // setTimeout(() => { ... }, 50);
+
+          // Detach the canvas from any centering wrappers
+          canvas.remove();
+
+          // Clear body and make canvas the only child
+          const body = doc.body;
+          body.innerHTML = "";
+          body.style.margin = "0";
+          body.style.padding = "0";
+          body.style.display = "block";
+          body.appendChild(canvas);
+
+          // Ensure canvas is top-left
+          canvas.style.display = "block";
+          canvas.style.margin = "0";
+          canvas.style.position = "static";
+
+          // Size iframe to the canvas
+          const width = canvas.width || canvas.clientWidth || 800;
+          const height = canvas.height || canvas.clientHeight || 600;
+          iframe.style.width = width + "px";
+          iframe.style.height = height + "px";
+
+          // No scrollbars
+          win.scrollTo(0, 0);
+        } catch (e) {
+          console.warn("Could not normalize iframe:", e);
+        }
+      }
+
+      window.addEventListener("load", () => {
+        document.querySelectorAll("iframe.game-frame").forEach((iframe) => {
+          iframe.addEventListener("load", () => normalizeIframeToCanvas(iframe));
+        });
+      });
+    </script>
+  </body>
+</html>
