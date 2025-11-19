@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>This Way of Life – Versions</title>
+    <title>AI as Co-Constructor - Ben Wheeler</title>
     <style>
       body {
         font-family: system-ui, sans-serif;
@@ -307,6 +307,32 @@ things that neither of them can do alone." (p. 213) I suspect that the current c
     <h3>Persuadability</h3>
   <p>While we wait for more sophisticated base models (and at the rate things are going, we may not have to wait long), we might equip our existing models better to respond more fluidly to degrees of human emphasis, and even exasperation. I knew enough about the likely implementation of gravity and edge detection in my game's code to eventually instruct the LLM to rebuild its physics model from scratch. But this type of teardown should be something code assistants are ready to do, if users indicate that they are repeating themselves and growing frustrated. 
     <p>That is, the models should be build with an awareness of their own stubbornness and limitations, and there should be a qualitatively different response that can be activated when their limits are taking the spotlight and causing problems. At the least, they should be able to explain to the user what is going wrong, and whether it is a technical boundary or a problem of understanding!</p>
+
+
+<h3>The meta-work of software engineering</h3>
+
+<p>For another project for this course, I set out to build something small but genuinely useful to me. I’m a heavy user of the productivity app <a href="todoist.com">Todoist</a>, and for a long time I’ve wanted a tool that would take my entire, sometimes overwhelming task list for the present day, and present me with just one single task to work on next. 
+On the surface, this would appear to be simple enough--just some logic to read the list, pick a random task, and show it in a minimal interface.
+
+<p>But immediately, I snagged on trying to connect my prototype to Todoist’s API. The LLM was helpful in wading through this world of API keys, credential flows, and permission scopes, but there was no way around my having to do a significant amount of engineering work to get this working. 
+None of this is dramatic or unusual; it’s simply what modern software is like. But it’s a useful reminder that creating software is seldom a matter of
+only writing textual code; crucially, it encompasses decisions, actions and considerations outside of the mere textual scope, including decisions about the
+nature of that scope itself. 
+
+<p>After several attempts, I decided to sidestep the Todoist integration entirely, and instead dropped some mock data into a public Google Sheet. 
+This let me build the flow of the interface without worrying about credentials at all (though even this simpler setup required some manual debugging!). 
+
+<p>Once I did that, I was able to play with the app's interface, and iterate on its look and feel. 
+
+  <img class="inspiration" src="src/images/onetask.gif" alt="Screenshot from my One Task app" />
+
+<p>This approach follows a long-standing best practice in software development: get a simple version working first, and build complexity out from there. 
+This lets you learn from interacting with a small but functioning system, rather than spending hours up front wrestling thorny technical problems. 
+Often, after trying out your demo version, you find yourself changing direction anyway--rendering the deeper technical work unnecessary.
+
+<p>As vibe coding matures, it will become more capable of acting "agentically" to handle setup of multiple interacting components. 
+But I suspect there will always be meta-work of software engineering where human judgment will remain essential.
+
 
   <h3>The purposes of code creation</h3>
 
