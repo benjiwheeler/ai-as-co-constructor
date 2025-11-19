@@ -12,6 +12,9 @@
         margin: 0 auto;
         padding: 0 20px;
       }
+      h3 {
+        margin-top: 2.5rem;
+      }
       .version-block {
         margin-bottom: 2rem;
       }
@@ -36,6 +39,9 @@
         padding: 10px 15px;
         margin: 1em 0;
       }
+      blockquote.quotation {
+        font-size: 0.9rem;
+      }
     </style>
   </head>
   <body>
@@ -51,7 +57,7 @@
 
     <p>It's a disorienting thing to see a field you know well with new eyes, to see its methods and tooling upended. I've been a professional software engineer off and on for more than two decades, but AI-assisted coding has changed the daily work of coders like me radically, and "vibe coding" even more so.
 
-    <p>I'm also an educator, and I've been teaching introductory programming for years. I've been watching the advent of vibe coding with a mixture of excitement and unease. MIT professor Mitchell Resnick and MIT researcher Natalie Rusk, co-creators of the Scratch programming language, write that ideal creative educational experiences provide a "low floor" to entry, "wide walls" for breadth of expressive possibilites, and a "high ceiling" allowing for complexity and ambition. Vibe coding holds promise for each of these elements, particularly a floor that is being lowered beyond what any computer science educator might have hoped only a few years ago.
+    <p>I'm also an educator, and I've been teaching introductory programming for years. I've been watching the advent of vibe coding with a mixture of excitement and unease. MIT professor Mitchell Resnick and MIT researcher Natalie Rusk, co-creators of the <a href="scratch.mit.edu">Scratch programming language</a>, write that ideal creative educational experiences provide a "low floor" to entry, "wide walls" for breadth of expressive possibilites, and a "high ceiling" allowing for complexity and ambition. Vibe coding holds promise for each of these elements, particularly a floor that is being lowered beyond what any computer science educator might have hoped only a few years ago.
 
     <p>According to some claims, there no longer is any floor at all; anyone can create software just by describing what they want in natural language. Many of these voices also claim that the walls have never been wider for new computational creators, and that there is practically no ceiling, either.
 
@@ -291,7 +297,7 @@ This session is being continued from a previous conversation that ran out of con
 things that neither of them can do alone." (p. 213) 
 
 And in J.C.R. Licklider's 1960 essay “Man-Computer Symbiosis,” he speculates that:
-  <blockquote>
+  <blockquote class="quotation">
 If those problems can be solved in such a way as to create a symbiotic relation between a man and a fast information-retrieval and data-processing machine,
 however, it seems evident that the cooperative interaction would greatly improve the thinking process. (p. 6)
   </blockquote>
@@ -309,7 +315,7 @@ continuous and fluid forms of interplay.</p>
 <p>Given the aplomb with which these models generate code, it can be easy to forget that they do not truly understand the code or the intent behind it. This illusion of understanding can be surprising, and frustrating--especially when the human operator is reduced to ever-more dramatic forms of emphasis.
 
 <p>Hubert Dreyfus also writes:</p>
-  <blockquote>
+  <blockquote class="quotation">
     Game playing, language translation, problem solving, and pattern recognition, each depends on specific forms of human ‘information processing,’ 
     which are in turn based on the human way of being in the world. And this way of being-in-a-situation turns out to be unprogrammable in principle 
     using presently conceivable techniques. (p. 214-215)
@@ -345,7 +351,7 @@ This lets you learn from interacting with a small but functioning system, rather
 Often, after trying out your demo version, you find yourself changing direction anyway--rendering the deeper technical work unnecessary.
 
 I see these higher-scope roles as always remaining the domain of humans. J.C.R. Licklider seems to have anticipated something along these lines back in 1960, writing:
-  <blockquote>
+  <blockquote class="quotation">
 As has been said in various ways, men are noisy, narrow-band devices, but their nervous systems have very many parallel and simultaneously 
 active channels. Relative to men, computing machines are very fast and very accurate, but they are constrained to perform only one or a few 
 elementary operations at a time. Men are flexible, capable of ‘programming themselves contingently’ on the basis of newly received information. 
@@ -377,7 +383,7 @@ But I suspect there will always be meta-work of software engineering where human
   32 voting districts to see which candidates are correlated positively with each other, and which negatively.</p>
 
   <p>First I produced a spreadsheet with a correlation table, to see if there was enough signal amidst the noise, with so few data points:
-<p><img class="inspiration" src="src/images/correlationtable.gif" alt="Correlation table of candidate results" /></p>
+<p><img class="inspiration" src="src/images/correlationtable.png" alt="Correlation table of candidate results" /></p>
   <p>There were some believable correlations evident in the table, so I proceeded to use the Cursor code editor and Github Copilot (a common
     AI-assited coding combination) to make a visualization of the correlations.
 
@@ -387,19 +393,81 @@ But I suspect there will always be meta-work of software engineering where human
   </p>
   <p><a href="https://benjiwheeler.github.io/somecorrelations/"><img class="inspiration" src="src/images/correlationexplorer.gif" alt="Screenshot from my correlation explorer" /></a></p>
 
-  <p>However, this was also the project where I had to do the most manual intervention as a programmer. There were simply too many nuances of color, length and size
-    for me to describe adequately in prompts, iteration by iteration; fine-tuning these aspects to my liking would take probably 100 prompts, if it would work at all;
-    or I could read the short code the LLM had written, find the variables I needed to tweak (or, in some cases, create them), and get them right in a few tries. 
-  </p>
-
 <p>Additionally, there was a more subtle aspect that arose here. Inspired by a student who had created an 8-bit-style pixel portrait of me, 
   I used ChatGPT 5 to produce these for each candidate, thinking that it would
   be fun to have these be part of the visualization. However, I quickly realized that this was a bad idea; some candidates might not appreciate being represented 
   in this way, since it contains an element of caricature, and I decided to remove these from the final version.
 </p>
 
+  <p style="text-align: center;">
+    <img src="src/images/wheeler.png" alt="Wheeler" style="width: 240px; height: 360px; display: inline-block; margin: 0 10px;" />
+    <img src="src/images/wilson.png" alt="Wilson" style="width: 320px; height: 320px; display: inline-block; margin: 0 0 15px 0;" />
+  </p>
+  <!-- centered caption with small text size -->
+  <p style="text-align: center; font-size: small; color: gray;">
+    Pixel caricatures of me (left) and mayoral candidate Jake Wilson (right), generated by ChatGPT 5
+    </p>
 
-  <p></p>
+<p>Joseph Weizenbaum, creator of the therapist-imitating chatbot ELIZA, was concerned about these questions of human judgement, 
+and worried that empowering computers would place such moral considerations in danger. In Ben Tarnoff's article
+<a href="https://www.theguardian.com/technology/2023/jul/25/joseph-weizenbaum-inventor-eliza-chatbot-turned-against-artificial-intelligence-ai">Weizenbaum’s nightmares:
+how the inventor of the first chatbot turned against AI</a>, he writes:
+
+  <blockquote class="quotation">
+For Weizenbaum, judgment involves choices that are guided by values.
+These values are acquired through the course of our life experience and are
+necessarily qualitative: they cannot be captured in code. Calculation, by
+contrast, is quantitative. It uses a technical calculus to arrive at a decision.
+Computers are only capable of calculation, not judgment. This is because
+they are not human, which is to say, they do not have a human history--they were not born to mothers, they did not have a childhood, they do not
+inhabit human bodies or possess a human psyche with a human
+unconscious--and so do not have the basis from which to form values.
+  </blockquote>
+
+<p>I don't mean to overstate the mild risk of sharing AI-generated pixel caricatures of public figures. But not having drawn the pixels myself, or even
+  employing a human artist to do so, it is easy for small bits of inconsideration to creep in--including, for example, elements of sexual objectivity or
+  racist stereotyping that the LLM may have absorbed from its training data. The more we remove humans from the loop--or even, relegate them to
+  occasional oversight--the more we abdicate this moral role.
+</p>
+
+<h3>Moving between vibe and manual coding</h3>
+
+  <p>However, this correlation visualizer was also the project where I had to do the most manual intervention as a programmer. There were simply too many nuances of color, length and size
+    for me to describe adequately in prompts, iteration by iteration; fine-tuning these aspects to my liking would take probably 100 prompts, if it would work at all;
+    or I could read the short code the LLM had written, find the variables I needed to tweak (or, in some cases, create them), and get them right in a few tries. 
+  </p>
+
+  <p>In fact, reviewing the prompts I used, I see that there were many places in this project's development that I brought to bear my knowledge as a programmer. Examples:</p>
+
+<blockquote class="code">
+can you move most of the javascript to a separate file, and have it included by index.html?
+</blockquote>
+
+<blockquote class="code">
+help me understand which lines of code would have to change to adjust the basic displayed distance between nodes
+</blockquote>
+
+<blockquote class="code">
+is absCorr actually being used for anything? Isn't absCorr * absCorr equal to correlation * correlation, no matter what sign correlation has?
+</blockquote>
+
+<blockquote class="code">
+so, I changed something in correl_data.json but it's not hard reloading... do we need to somehow cache bust that too???
+</blockquote>
+
+<blockquote class="code">
+For the nodes array in the json file, can each be an object with fields "label", and "display", where display is 0 or 1, and nodes only appear in the graph if display is 1?
+</blockquote>
+
+<blockquote class="code">
+can you add to the "nodes" objects a property called "size", and for "q3", set size to 0.6?  (it can be missing from the other objects.) In the code, multiply the display size for each node by its "size" property, with a default "size" value of 1.0
+</blockquote>
+
+
+<p>When people speak of vibe coding as making code project creation "easy", I often wonder about the gap between my capability
+    and that of a complete novice. Certainly, a novice could have built a correlation visualizer like mine without my programming knowledge.
+    But how much more work and time would it have taken them--and would they be as able to explore the space of possibilities as I was,?
+     </p>
 
   <h3>The purposes of code creation</h3>
 
