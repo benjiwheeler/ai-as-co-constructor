@@ -291,6 +291,8 @@ This session is being continued from a previous conversation that ran out of con
 <br>   - Power recharge should be slower (changed from 0.3 to 0.1)
 <br>   - Objects should visibly pile on ground - implemented stacking with 8-pixel overlap
 <br>   - Movement slowdown should be stronger (changed from 30% min to 15% min, increased slowdown rate)
+<br>
+<br><em>[Continues for another 100 or so lines, including portions of the code itself]</em>
 </blockquote>
 
 <p>An immediate thought I had when discovering these was that I wished that such a current description of Claude's understanding were made available to me as an editable, two-way document, something that would both capture context, and allow me to adjust it. It's striking, for example, that my sporadic use of ALL CAPS to urge the LLM to take some instruction seriously did not leave much of an impression on these summaries!</p>
@@ -361,7 +363,7 @@ nature of that scope itself.
 <p>After several attempts, I decided to sidestep the Todoist integration entirely, and instead dropped some mock data into a public Google Sheet. 
 This let me build the flow of the interface without worrying about credentials at all (though even this simpler setup required some manual debugging!). 
 
-<p>Once I did that, I was able to play with the app's interface, and iterate on its look and feel; <a href="https://benjiwheeler.github.io/onetask/">you can try it here.</a></p>
+<p>Once I did that, I was able to play with the app's interface, and iterate on its look and feel; <a href="https://benjiwheeler.github.io/onetask/">you can try this interface here.</a></p>
 
 <p><a href="https://benjiwheeler.github.io/onetask/"><img class="inspiration" src="src/images/onetask.gif" alt="Screenshot from my One Task app" /></a></p>
 
@@ -389,12 +391,12 @@ Computing machines are single-minded, constrained by their ‘pre-programming.�
 
   <p><a href="https://benjiwheeler.github.io/circlesandcircles/"><img class="inspiration" src="src/images/circlesandcircles.gif" alt="Screenshot from my Circles and Circles animation" /></a></p>
 
-<p>It may not look like much at first, but if you let it keep running, it looks something like the surface of the sun (at least, to me!):</p>
+<p>(It may not look like much at first, but if you let it keep running, it looks something like the surface of the sun--at least, to me!):</p>
 
   <p><a href="https://benjiwheeler.github.io/circlesandcircles/"><img class="inspiration" src="src/images/circlesandcircles-long.png" alt="Screenshot from my Circles and Circles animation, after letting it run for 10 minutes" /></a></p>
   
   
-  <p>If we extend this trend forward, we can see that AI applications will certainly become more capable of acting "agentically" 
+  <p>If we accept this trend of expanding coding assistant reach, and assume it continues to absorb more areas of system complexity, we can see that AI applications will certainly become more capable of acting "agentically" 
   to, say, handle setup of multiple interacting components via APIs. 
 But I suspect there will always be meta-work of software engineering where human judgment will remain essential.
 
@@ -406,8 +408,7 @@ But I suspect there will always be meta-work of software engineering where human
 
   <p>First I produced a spreadsheet with a correlation table, to see if there was enough signal amidst the noise, with so few data points:
 <p><img class="inspiration" src="src/images/correlationtable.png" alt="Correlation table of candidate results" /></p>
-  <p>There were some believable correlations evident in the table, so I proceeded to use the Cursor code editor and Github Copilot (a common
-    AI-assited coding combination) to make a visualization of the correlations.
+  <p>There were some believable correlations evident in the table, so I proceeded to use Claude Code to generate a visualization of the correlations.
 
     <p>This was perhaps the most impressed I was with the LLM capabilities during the course, though I shouldn't have been surprised;
       this task is a perfect example of one with a wealth of good examples online. It produced a graph that was not only accurate and interactive
@@ -513,11 +514,10 @@ onset of the AI age brings, it has already become integrated into our societies 
 “What is undeniable, in my view, is that the symbiosis has advanced so far that developed societies cannot afford <em>not</em> to use computational media.” (introduction)
 
 <p>This is partially a matter of merely keeping up, of staying compatibile with a system where illegibility equals nonexistence.
-
-<p>But use of computational media also offers opportunities. One is in the capturing and manipulation of context, along the lines 
-  of the hidden prompts in Claude Code that I found. Systems of rules and understandings, from team agreements to organizational 
-  standards to procedural conventions to personal philosophies, can be ambiently captured and made visible and even editable, for 
-  all sorts of uses. Picture a self-assembling compilation of best practices for a team, that can give team members a heads up when 
+But use of computational media also offers opportunities. One is in the capturing and manipulation of context, along the lines 
+  of the hidden prompts in Claude Code that I found. If we can capture systems of rules and understandings--from team agreements to organizational 
+  standards to procedural conventions to personal philosophies--make them visible and even editable, we may unlock 
+  all sorts of capabilities. Picture a self-assembling compilation of best practices for a team, that can give team members a heads up when 
   they're broken, but which can also be adjusted when it's off-base.</p>
   
   <p>I suspect this surfacing of procedure may provide for a wide democratization of code, at least of a sort. Programmers often draft logical 
