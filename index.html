@@ -285,9 +285,21 @@ This session is being continued from a previous conversation that ran out of con
 
 <p>On reflection, it's fairly arbitrary that we expect code assistant prompts to produce one, and only one, code changeset. This seems to be an artifact of two things: 1) the fact that LLMs were first presented to us in chat form, where a single response best replicates chat with a human; and 2) the fact that code version software like git is built on the human-only workflow of a single changeset at a time. But in a world where computation is (relatively) inexpensive and human time is costly, why shouldn't our tools propose a variety of possible actions in responses to our prompts, and provide us an interface for exploring and comparing these?</p>
 
+<p>It's astonishing how early in the history of human-computer interfaces it became clear that the combination of human and computer would be far more powerful than either on their own.</p>
   <p>In Hubert L. Dreyfus’s <a href="https://monoskop.org/images/c/ce/Dreyfus_Hubert_What_Computers_Cant_Do_A_Critique_of_Artificial_Reason.pdf"><em>What Computers Can’t Do: A Critique of Artificial Reason</em></a> (1972), he quotes Walter Rosenblith as saying,
  "Man <em>and</em> computer is capable of accomplishing
-things that neither of them can do alone." (p. 213) I suspect that the current convention of linear chat interfaces will be only one of many different ways that humans can explore the space of possibilities along with AI assistants, and that the most effective of these will be those that allow the most continuous and fluid forms of interplay.</p>
+things that neither of them can do alone." (p. 213) 
+
+And in J.C.R. Licklider's 1960 essay “Man-Computer Symbiosis,” he speculates that:
+  <blockquote>
+If those problems can be solved in such a way as to create a symbiotic relation between a man and a fast information-retrieval and data-processing machine,
+however, it seems evident that the cooperative interaction would greatly improve the thinking process. (p. 6)
+  </blockquote>
+
+We are still only at the beginning of seeing the potential forms of these "cooperative interactions". 
+I suspect that the current convention of linear chat interfaces will be only one of many different ways that humans can explore the space of 
+possibilities along with AI assistants, and that the most effective of these will be those that allow the most 
+continuous and fluid forms of interplay.</p>
 
 
 <h3>The illusion of understanding</h3>
@@ -296,9 +308,11 @@ things that neither of them can do alone." (p. 213) I suspect that the current c
 
 <p>Given the aplomb with which these models generate code, it can be easy to forget that they do not truly understand the code or the intent behind it. This illusion of understanding can be surprising, and frustrating--especially when the human operator is reduced to ever-more dramatic forms of emphasis.
 
-<p>Dreyfus also writes:</p>
+<p>Hubert Dreyfus also writes:</p>
   <blockquote>
-    Game playing, language translation, problem solving, and pattern recognition, each depends on specific forms of human ‘information processing,’ which are in turn based on the human way of being in the world. And this way of being-in-a-situation turns out to be unprogrammable in principle using presently conceivable techniques. (p. 214-215)
+    Game playing, language translation, problem solving, and pattern recognition, each depends on specific forms of human ‘information processing,’ 
+    which are in turn based on the human way of being in the world. And this way of being-in-a-situation turns out to be unprogrammable in principle 
+    using presently conceivable techniques. (p. 214-215)
   </blockquote>
 
   <p>It's fascinating that even as the recent AI revolution has squarely surpassed the "presently conceivable techniques" of Dreyfus's era, the question of the limits of AI to capture context remain--and his point about the human context of "being-in-a-situation" is still salient. A key question is whether the limits we're seeing today are a matter of being "unprogrammable", as Dreyfus suspected of his era, or whether they, too, can be captured adequately by our simplifying models.
@@ -322,15 +336,30 @@ nature of that scope itself.
 <p>After several attempts, I decided to sidestep the Todoist integration entirely, and instead dropped some mock data into a public Google Sheet. 
 This let me build the flow of the interface without worrying about credentials at all (though even this simpler setup required some manual debugging!). 
 
-<p>Once I did that, I was able to play with the app's interface, and iterate on its look and feel. 
+<p>Once I did that, I was able to play with the app's interface, and iterate on its look and feel.</p>
 
-  <img class="inspiration" src="src/images/onetask.gif" alt="Screenshot from my One Task app" />
+<p><img class="inspiration" src="src/images/onetask.gif" alt="Screenshot from my One Task app" /></p>
 
 <p>This approach follows a long-standing best practice in software development: get a simple version working first, and build complexity out from there. 
 This lets you learn from interacting with a small but functioning system, rather than spending hours up front wrestling thorny technical problems. 
 Often, after trying out your demo version, you find yourself changing direction anyway--rendering the deeper technical work unnecessary.
 
-<p>As vibe coding matures, it will become more capable of acting "agentically" to handle setup of multiple interacting components. 
+I see these higher-scope roles as always remaining the domain of humans. J.C.R. Licklider seems to have anticipated something along these lines back in 1960, writing:
+  <blockquote>
+As has been said in various ways, men are noisy, narrow-band devices, but their nervous systems have very many parallel and simultaneously 
+active channels. Relative to men, computing machines are very fast and very accurate, but they are constrained to perform only one or a few 
+elementary operations at a time. Men are flexible, capable of ‘programming themselves contingently’ on the basis of newly received information. 
+Computing machines are single-minded, constrained by their ‘pre-programming.’ (p. 6)
+</blockquote> 
+
+<p>I might be stretching Licklider's "programming themselves contingently" a bit here, beyond merely incorporating "newly received information"
+  and into broader judgments about project purpose, scope and direction. But I think the essence of his point remains: humans can alter the 
+  bounds of our perspective and frame of reference in ways that mathematical models, no matter how elaborate, cannot.
+
+</p>
+
+<p>As vibe coding matures, some of these boundaries will dissolve; AI applications will certainly become more capable of acting "agentically" 
+  to, say, handle setup of multiple interacting components via APIs. 
 But I suspect there will always be meta-work of software engineering where human judgment will remain essential.
 
 
