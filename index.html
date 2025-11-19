@@ -22,60 +22,50 @@
         width: 540px;
         height: 425px;
       }
+      img.inspiration {
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+        height: auto;
+      }
+      blockquote.code {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.85em;
+        background-color: #f5f5f5;
+        border-left: 4px solid #ccc;
+        padding: 10px 15px;
+        margin: 1em 0;
+      }
     </style>
   </head>
   <body>
     <div class="container">
     <h1>AI as Co-Constructor</h1>
 
-    <p>How should we approach creative collaboration with AI?
+    <h2><em>How should we approach creative collaboration with AI?</em></h2>
 
-<p>how well does vibe coding actually work?
+      <p>By Ben Wheeler, 2025</p>
+  <p>&nbsp;</p>
 
-<p>what’s hard about traditional programming: 
-complexity that limits the scope of the piece you can control
-hidden technical steps that you do not have control over
-capabilities that exist, but are opaque; you don’t know if you don’t know
-the gap between your intention and the instructions you actually wrote; people frequently miss or rearrange steps, forget to cover edge cases
+    <h3>The advent of "vibe coding"</h3>
 
-<p>what’s powerful about traditional programming: 
-once you get it working, it can work for you thousands more times, or for thousands of other people
-a sense of magic in taking your intentions and plans, and carrying them out faithfully
-the ability of computers to calculate fast can be put to whatever use you want
-when there are gaps between intention and result, you can slow down and inspect and step through to resolve this gap
+    <p>It's a disorienting thing to see a field you know well with new eyes, to see its methods and tooling upended. I've been a professional software engineer off and on for more than two decades, but AI-assisted coding has changed the daily work of coders like me radically, and "vibe coding" even more so.
 
+    <p>I'm also an educator, and I've been teaching introductory programming for years. I've been watching the advent of vibe coding with a mixture of excitement and unease. MIT professor Mitchell Resnick and MIT researcher Natalie Rusk, co-creators of the Scratch programming language, write that ideal creative educational experiences provide a "low floor" to entry, "wide walls" for breadth of expressive possibilites, and a "high ceiling" allowing for complexity and ambition. Vibe coding holds promise for each of these elements, particularly a floor that is being lowered beyond what any computer science educator might have hoped only a few years ago.
 
-<p>what’s hard about vibe coding: 
-the gap between your intention and the prompt you actually wrote
-gap between functionality that would fit the prompt, and the code that was generated. narrower gap in some ways because it won’t, say, miss an edge case, but can be unknowably wide
-inability to make steady, incremental progress on resolving gaps; difficult to inspect
-when you hit technical limits (CORS, need for persistent data store, inability for some model to incorporate outside resource URLs), the models do not understand their own limits and when to stop attempting to fix the problem, and start explaining how you will need to transcend the model
-LLMs are highly path-dependent; you can reach a poor local maximum, and have no way to make progress but to backtrack or start over. This requires human judgment to recognize.
+    <p>According to some claims, there no longer is any floor at all; anyone can create software just by describing what they want in natural language. Many of these voices also claim that the walls have never been wider for new computational creators, and that there is practically no ceiling, either.
 
-<p>what’s powerful about vibe coding: 
-ability to create something usable quickly
-conversational model; easier to react to examples with critical feedback, than to design something from scratch
-ability to leverage the internet’s collective technical knowledge
-capabilities that you don’t know about can be made available to you; ability to be surprised, to brainstorm, to draw on domain knowledge
+    <p>How true are these claims? And how can educators, and designers of creative educational software, make use of these new technologies to guide learners to the most stimulating, empowering and enriching paths to digital creativity? These are questions I have been hoping to answer in my assistant teaching a new course at Harvard's Graduate School of Education, T564A: "Vibe Coding". 
 
+    <h3>Project inspirations</h3>
 
-<p>theses:
-understanding AI model limits is crucial to using them well
-effective explorations using AI are nonlinear
-novice users don’t realize how much of what they imagine is missing from their prompts; need practice making understandings explicit
-LLM use for projects involves multiple LLMs and context sessions; maintaining and recreating context is key
-we need language for distilled, LLM-assisted context summaries, and need to build tools for editing these manually
-there is a major gap between the predictive structure of LLMs, and the way humans think in terms of immediate priorities. Many students yearn for “something stronger than all caps” to get an LLM to deeply reassess some assumption.
+    <p>I'm going to use one of the projects I made for this course as an example of the current state of vibe coding, and what it currently does, and doesn't, afford.</p>
 
-<p>examples from my projects:
+    <p>The initial inspirations for this project were three very different games I'd loved:</p>
 
-<p>this way of life – i have full prompt history, versions. what’s interesting?
-need to urge it to rewrite elements
-serendipitous elements; so much that is part of the later version is the creative invention of the LLM
-but, it didn’t take my cue to produce more branches than I described
-incoherence: meters are often meaningless
-internal understanding shows in its handoffs; but that is currently not exposed. room for more of a proactive approach?
+    <p>1. <a href="https://archive.org/details/mac_Social_Climber">Social Climber</a>, an 80's game for the Macintosh whose simple gameplay and black and white graphics made it a favorite with my siblings:
 
+<<<<<<< HEAD
     <div class="container">
     <h1>AI as Co-Constructor</h1>
 
@@ -127,11 +117,46 @@ but, it didn’t take my cue to produce more branches than I described
 incoherence: meters are often meaningless
 internal understanding shows in its handoffs; but that is currently not exposed. room for more of a proactive approach?
 
+=======
+    <p><a href="https://archive.org/details/mac_Social_Climber"><img class="inspiration" src="src/images/socialclimber.png" alt="Social Climber game screenshot" /></a></p>
+>>>>>>> a1e7bfe (wrote draft of writeup)
 
+    <p>2. <a href="https://adarkroom.doublespeakgames.com/">A Dark Room</a>, a mostly text-based game (with some creative use of buttons, progress bars and ASCII graphics) whose scenario and meaning unfold in unexpected ways:</p>
+
+    <p><a href="https://adarkroom.doublespeakgames.com/"><img class="inspiration" src="src/images/adarkroom.png" alt="A Dark Room game screenshot" /></a></p>
+
+    <p>and 3. <a href="https://kbhgames.com/game/frog-fractions#google_vignette">Frog Fractions</a>, an infamous bait-and-switch of a game that isn't what it initially appears to be, and whose gameplay rules change as you play it.</p>
+
+    <p><a href="https://kbhgames.com/game/frog-fractions#google_vignette"><img class="inspiration" src="src/images/frogfractions.jpg" alt="Frog Fractions game screenshot" /></a></p>
+
+    <p>As I sat down to compose my first prompt for an LLM coding assistant, I was vaguely imagining a game with <em>Social Climber's</em> visual aesthetics, <em>A Dark Room's</em> atmosphere of guilt and solitude, and <em>Frog Fractions'</em> reshapable rules and meta-gameplay.</p>
+
+    <h3>The first prompt</h3>
+
+    <p>I used Anthropic's <a href="https://www.claude.com/product/claude-code">Claude Code</a> on the commandline, and began with this prompt:</p>
+
+    <blockquote class="code">
+    let's make a very simple game, with black and white pixel graphics. The aesthetic is Macintosh SE shareware. The player is a woman with an unbrella, and pressing the up button opens the umbrella and pushes it upward to repel falling obstacles. The obstacles should be funny -- an angry cat, a meteor, an old boot, a coke can. She can move left and right, but not jump.
+    </blockquote>
+
+    <p>Note the interpersonal tone I struck without thinking about it, as though this were a collaborator, not a tool. Note also my initial misspelling of "umbrella", the sort of error that traditional programming would choke on, but which large language models handle without blinking. Note also the specifics I give: precise button input, a narrow aesthetic reference, item examples and a note on tone.</p>
+    
+    <p>In my helping students in this class, a common problem was that they imagined many of these specific elements, but did not describe them in the prompts they gave to coding assistants -- a mistake that echoes one of the perennial mistakes that people make in writing code the traditional way, where we conceive of logical steps that we neglect to include in the actual code we write.</p>
+  
+    <p>Not to say that I am immune from this mistake; there was plenty that was percolating in my head when I wrote this prompt, that I didn't put into the prompt itself. One of the beauties of vibe coding is that you do not need to design exhaustively before creating something; creation is so fast that you can give partial descriptions, and iterate from there. I gave explicit form only to what was firmly clear in my mind, unsure what form the other elements would take.</p>
+
+    <p>I quickly followed this up with a second prompt:</p>
+
+    <blockquote class="code">
+    Can you add a power meter, which starts full, but declines the longer you have the umbrella open? When the umbrella is closed, it slowly recharges. And when obstacles hit the ground, they pile up -- and the more obstacles piled in a particular spot, the longer it takes to move left and right across that area.
+    </blockquote>
+
+    <p>After a few initial prompts like this, I had a playable game, albeit a very buggy one. Witness the bizarre way the falling objects accelerate upwards when they hit the bottom of the screen:</p>
 
     <div class="version-block">
-  <h2>Version 1.0 (1040dc7)</h2>
+  <h2>Version 1.0</h2>
   <button onclick="reloadFrame('v1_0_1040dc7')">Reload</button>
+  <small><em>Controls: left and right arrows: move; up arrow: open umbrella</em></small>
   <iframe
     id="v1_0_1040dc7"
     class="game-frame"
@@ -140,20 +165,23 @@ internal understanding shows in its handoffs; but that is currently not exposed.
   ></iframe>
 </div>
 
-<div class="version-block">
-  <h2>Version 1.0 (b78d4b6)</h2>
-  <button onclick="reloadFrame('v1_0_b78d4b6')">Reload</button>
-  <iframe
-    id="v1_0_b78d4b6"
-    class="game-frame"
-    src="https://benjiwheeler.github.io/ThisWayOfLifeGame/past-versions/1.0.b78d4b6/"
-    scrolling="no"
-  ></iframe>
-</div>
+    <p>There was plenty else that was wrong. For one thing, I could not get the objects to stack as I intended.</p>
+
+    <p>I tried correcting the LLM, with a snarky "actually":</p>
+<blockquote class="code">
+let's make the power recharge more slowly. also, have the objects actually stay on the ground when they hit it
+</blockquote>
+<p>and using all caps for emphasis:</p>
+<blockquote class="code">
+can the obstacles that fall to the ground actually pile on TOP of each other, so that they only slightly overlap, instead of occupying the same exact space?
+</blockquote>
+
+<p>Slowly, with many prompts, I was coaxing Claude to improve the stacking behavior, though it still included large amounts of padding around the objects as they stacked:</p>
 
 <div class="version-block">
-  <h2>Version 1.1 (b805a10)</h2>
+  <h2>Version 1.1</h2>
   <button onclick="reloadFrame('v1_1_b805a10')">Reload</button>
+  <small><em>Controls: left and right arrows: move; up arrow: open umbrella</em></small>
   <iframe
     id="v1_1_b805a10"
     class="game-frame"
@@ -162,40 +190,22 @@ internal understanding shows in its handoffs; but that is currently not exposed.
   ></iframe>
 </div>
 
-<div class="version-block">
-  <h2>Version 1.2 (d1d2251)</h2>
-  <button onclick="reloadFrame('v1_2_d1d2251')">Reload</button>
-  <iframe
-    id="v1_2_d1d2251"
-    class="game-frame"
-    src="https://benjiwheeler.github.io/ThisWayOfLifeGame/past-versions/1.2.d1d2251/"
-    scrolling="no"
-  ></iframe>
-</div>
+<p>Meanwhile, I was trying to expand the scope of the game, and to introduce some of the meta-game elements. I tried to describe these at length:</p>
 
-<div class="version-block">
-  <h2>Version 1.3 (041f475)</h2>
-  <button onclick="reloadFrame('v1_3_041f475')">Reload</button>
-  <iframe
-    id="v1_3_041f475"
-    class="game-frame"
-    src="https://benjiwheeler.github.io/ThisWayOfLifeGame/past-versions/1.3.041f475/"
-    scrolling="no"
-  ></iframe>
-</div>
 
-<div class="version-block">
-  <h2>Version 1.4 (d6de5cb)</h2>
-  <button onclick="reloadFrame('v1_4_d6de5cb')">Reload</button>
-  <iframe
-    id="v1_4_d6de5cb"
-    class="game-frame"
-    src="https://benjiwheeler.github.io/ThisWayOfLifeGame/past-versions/1.4.d6de5cb/"
-    scrolling="no"
-  ></iframe>
-</div>
+<blockquote class="code">
+OK, now I want to expand the scope of the game. I want it to incorporate story elements... [text omitted] When you reach zero, a "TEXT CHOICE" appears. Each choice starts with a 10-30 word bit of story, and then introduces a choice that must CHANGE THE RULES AND APPEARANCE OF THE GAME ITSELF. The first text should be: "Are these obstacles falling just on me? Why are they keeping me away from those I love? Should I fight them, or try to learn more about why they are falling?" The first choice should be "A) Fight them!" or "B) Learn about them" If you choose A, your umbrella should grow, and your power meter should become larger. If you choose B, then a "Knowledge" meter should appear... [more prompt text omitted]
+</blockquote>
+<p>and:</p>
+<blockquote class="code">
+once the knowledge meter fills up entirely, it should trigger a new text prompt. This one should read: "I have learned so much, and yet I feel more mystified than before. How can I bridge this gap?". Choice A should be "Try to learn faster", and that should increase your movement speed, reset the knowledge meter, and increase the rate of knowledge learning. Choice B should be "Meditate", and that should reset the knowledge meter, but now it won't increase when you touch obstacles -- it increases only when you are completely still, and increases slowly.
+</blockquote>
 
-<div class="version-block">
+<p>These and a few more prompts produced the first version that felt like it "clicked" for me. It was possible to reach the first decision point reliably, although plenty still didn't work right. For instance, the "learning" option didn't actually allow you to proceed; the learning meter wouldn't fill up.</p>
+
+<p>See if you can deflect enough objects to get the "countdown" down to zero, and reach the first decision point:</p>
+
+<!-- <div class="version-block">
   <h2>Version 1.5 (a564825)</h2>
   <button onclick="reloadFrame('v1_5_a564825')">Reload</button>
   <iframe
@@ -204,11 +214,13 @@ internal understanding shows in its handoffs; but that is currently not exposed.
     src="https://benjiwheeler.github.io/ThisWayOfLifeGame/past-versions/1.5.a564825/"
     scrolling="no"
   ></iframe>
-</div>
+</div> -->
+
 
 <div class="version-block">
-  <h2>Version 1.6 (117b548)</h2>
+  <h2>Version 1.6</h2>
   <button onclick="reloadFrame('v1_6_117b548')">Reload</button>
+  <small><em>Controls: left and right arrows: move; up arrow: open umbrella</em></small>
   <iframe
     id="v1_6_117b548"
     class="game-frame"
@@ -217,7 +229,7 @@ internal understanding shows in its handoffs; but that is currently not exposed.
   ></iframe>
 </div>
 
-<div class="version-block">
+<!-- <div class="version-block">
   <h2>Version 1.7 (3d9bd70)</h2>
   <button onclick="reloadFrame('v1_7_3d9bd70')">Reload</button>
   <iframe
@@ -238,8 +250,9 @@ internal understanding shows in its handoffs; but that is currently not exposed.
     scrolling="no"
   ></iframe>
 </div>
+-->
 
-<div class="version-block">
+<!-- <div class="version-block">
   <h2>Version 1.8 (d5b4df0)</h2>
   <button onclick="reloadFrame('v1_8_d5b4df0')">Reload</button>
   <iframe
@@ -248,8 +261,9 @@ internal understanding shows in its handoffs; but that is currently not exposed.
     src="https://benjiwheeler.github.io/ThisWayOfLifeGame/past-versions/1.8.d5b4df0/"
     scrolling="no"
   ></iframe>
-</div>
+</div> -->
 
+<!--
 <div class="version-block">
   <h2>Version 1.9 (afc1884)</h2>
   <button onclick="reloadFrame('v1_9_afc1884')">Reload</button>
@@ -259,11 +273,29 @@ internal understanding shows in its handoffs; but that is currently not exposed.
     src="https://benjiwheeler.github.io/ThisWayOfLifeGame/past-versions/1.9.afc1884/"
     scrolling="no"
   ></iframe>
-</div>
+</div> -->
+
+
+<p>At this stage in the process, a dozen or so prompts into iterating, I'm always fascinated by the gap between the huge amount that an LLM can understand and do, and the difficulty it seems to have in correcting its own errors. I went through many prompts trying to get the knowledge meter to work correctly, and to get the objects that strike the ground to stack and interact with the player and each other as I intended. Try as I might, I could not get Claude Code to handle the physical interactions between objects as I intended:</p>
+
+<blockquote class="code">
+So, the contact detection is still off -- obstacles seem to "jump" into place when they are near, before they are actually touching other objects. Also, in the "learning" phose if you pick B initially, falling objects don't trigger learning when they touch you anymore -- can you expand that contact field, so that learning does get triggered?
+</blockquote>
+<p>I eventually suggested that the LLM redo the physics logic from scratch:</p>
+
+<blockquote class="code">
+make sure that when obstacles are cleared, the obstacles ABOVE them fall down due to gravity! This may take a major rewrite of the physics logic.
+</blockquote>
+<p>This seemed to make a significant difference.</p>
+
+<p>Eventually, after 24 prompt/build iterations, I reached a stopping point, with a fairly playable game that only has a few branching decisions, but ones that basically work! (I especially like "meditation", if you can find it!)
+<p>At some point along the way, I decided that the player character was Victorian-era, and that the cascade of mysterious objects was a cosmic sign of the crumbling and overthrow of the empire she was part of. (This is very much in the spirit of one of the inspiring games I mentioned above.)</p>
+<p><em>Hint: when your character has chosen to "learn" about the mysterious objects, should you keep deflecting them?</em></p>
 
 <div class="version-block">
-  <h2>Version 2.0 (46cf44b)</h2>
+  <h2>Version 1.10</h2>
   <button onclick="reloadFrame('v2_0_46cf44b')">Reload</button>
+  <small><em>Controls: left and right arrows: move; up arrow: open umbrella</em></small>
   <iframe
     id="v2_0_46cf44b"
     class="game-frame"
@@ -272,6 +304,83 @@ internal understanding shows in its handoffs; but that is currently not exposed.
   ></iframe>
 </div>
 
+<h3>The hidden prompts</h3>
+
+As a side note, when I accessed Claude Code's prompt history to review the prompts I had used, I found that every dozen prompts or so, Claude was running out of capacity in its context history, and it was internally distilling our chat history into a summary, and feeding this to a fresh chat context. These internal summaries are a fascinating window into what it had drawn from my prompts, and from my cajoling. Here's the first example, edited for clarity and brevity:</p>
+
+<blockquote class="code">
+This session is being continued from a previous conversation that ran out of context. The conversation is summarized below:
+<br>Analysis:
+<br>Let me chronologically analyze this conversation:
+
+<br>1. **Game Creation Request**: User wanted a simple black and white pixel graphics game with Macintosh SE shareware aesthetic
+<br>   - Player: woman with umbrella
+<br>   - Mechanics: up button opens umbrella to deflect falling obstacles... <em>[more text omitted]</em>
+
+<br>2. **Power Meter Request**: User wanted a power meter that drains when umbrella is open and recharges when closed
+<br>   - Also wanted ground piling system where obstacles accumulate and slow movement
+<br>   - I implemented both features with visual feedback
+
+<br>3. **Refinement Requests**:
+<br>   - Power recharge should be slower (changed from 0.3 to 0.1)
+<br>   - Objects should visibly pile on ground - implemented stacking with 8-pixel overlap
+<br>   - Movement slowdown should be stronger (changed from 30% min to 15% min, increased slowdown rate)
+</blockquote>
+
+<p>An immediate thought I had when discovering these was that I wished that such a current description of Claude's understanding were made available to me as an editable, two-way document, something that would both capture context, and allow me to adjust it. It's striking, for example, that my sporadic use of ALL CAPS to urge the LLM to take some instruction seriously did not leave much of an impression on these summaries!</p>
+
+<h3>Exploratory AI interfaces</h3>
+
+<p>Impressively, Claude Code added "learning" text that I did not compose, which was in keeping with the game's tone of mystery. However, it didn't seem prepared to compose entire branches of the game's story tree. Currently, in my experience, LLM imagination only goes so far; it is excellent at producing variations on a theme, but noticeably poor at less linear sorts of imaginative extrapolation.</p>
+
+<p>Also, as you can see at a glance, though the gameplay evolved through these iterations, the basic design remained. The assumptions that the LLM made early on--most of them in its very first prompt--were essentially locked-in, unlikely to be revisited unless I explicitly demanded that they be modified. This is a typical pattern with vibe coding, an implicit element of the design process which has outsized, arbitrary power.</p>
+
+<p>As an alternative, what if code creation LLMs responded to initial prompts by creating several initial versions of an application? Or, what if the LLM engaged in some question-and-answer with the user about visual design inspirations, types of interaction, tone and scope?</p>
+
+<p>On reflection, it's fairly arbitrary that we expect code assistant prompts to produce one, and only one, code changeset. This seems to be an artifact of two things: 1) the fact that LLMs were first presented to us in chat form, where a single response best replicates chat with a human; and 2) the fact that code version software like git is built on the human-only workflow of a single changeset at a time. But in a world where computation is (relatively) inexpensive and human time is costly, why shouldn't our tools propose a variety of possible actions in responses to our prompts, and provide us an interface for exploring and comparing these?</p>
+
+  <p>In Hubert L. Dreyfus’s <a href="https://monoskop.org/images/c/ce/Dreyfus_Hubert_What_Computers_Cant_Do_A_Critique_of_Artificial_Reason.pdf"><em>What Computers Can’t Do: A Critique of Artificial Reason</em></a> (1972), he quotes Walter Rosenblith as saying,
+ "Man <em>and</em> computer is capable of accomplishing
+things that neither of them can do alone." (p. 213) I suspect that the current convention of linear chat interfaces will be only one of many different ways that humans can explore the space of possibilities along with AI assistants, and that the most effective of these will be those that allow the most continuous and fluid forms of interplay.</p>
+
+
+<h3>The illusion of understanding</h3>
+
+<p>In my work with students in this course, and in my own vibe coding attempts, it's funny how often we reach a point where we are reduced to begging the LLM to obey us. I used all caps in places, and tried creative ways to repeat myself, and to restate what I had asked (and which the LLM had failed to do). At times, the problem has been that we are bumping up against some specific technical limitation; e.g., Claude Code can currently produce only simple pixel images, not complex cartoon-style or photorealistic ones.</p>
+
+<p>Given the aplomb with which these models generate code, it can be easy to forget that they do not truly understand the code or the intent behind it. This illusion of understanding can be surprising, and frustrating--especially when the human operator is reduced to ever-more dramatic forms of emphasis.
+
+<p>Dreyfus also writes:</p>
+  <blockquote>
+    Game playing, language translation, problem solving, and pattern recognition, each depends on specific forms of human ‘information processing,’ which are in turn based on the human way of being in the world. And this way of being-in-a-situation turns out to be unprogrammable in principle using presently conceivable techniques. (p. 214-215)
+  </blockquote>
+
+  <p>It's fascinating that even as the recent AI revolution has squarely surpassed the "presently conceivable techniques" of Dreyfus's era, the question of the limits of AI to capture context remain--and his point about the human context of "being-in-a-situation" is still salient. A key question is whether the limits we're seeing today are a matter of being "unprogrammable", as Dreyfus suspected of his era, or whether they, too, can be captured adequately by our simplifying models.
+    <p>Are the ways that AI models approximate and imitate understanding of context bumping up against a limitation that they cannot transcend? Or, will they continue to improve and expand, so that the sorts of insurmountable frustrations of misunderstanding that vibe coders encounter so frequently today will be made rare? We are already seeing that simple rules, when implemented at a large enough scale, can replicate some forms of understanding shockingly well. Are we near an asymptotic boundary in simulating understanding comprehensively using masses of simple rules, or will we punch through the perceived limits?</p>
+
+    <h3>Persuadability</h3>
+  <p>While we wait for more sophisticated base models (and at the rate things are going, we may not have to wait long), we might equip our existing models better to respond more fluidly to degrees of human emphasis, and even exasperation. I knew enough about the likely implementation of gravity and edge detection in my game's code to eventually instruct the LLM to rebuild its physics model from scratch. But this type of teardown should be something code assistants are ready to do, if users indicate that they are repeating themselves and growing frustrated. 
+    <p>That is, the models should be build with an awareness of their own stubbornness and limitations, and there should be a qualitatively different response that can be activated when their limits are taking the spotlight and causing problems. At the least, they should be able to explain to the user what is going wrong, and whether it is a technical boundary or a problem of understanding!</p>
+
+  <h3>The purposes of code creation</h3>
+
+  <p>Just as the internet has (unfortunately) unbundled advertising from journalism, and video from shared screens to personal ones, so AI-assisted coding is unbundling the creative experience of making programs from the educational experience of learning to code. It used to be that the only way to make any program of more than basic logical novelty required learning a significant amount of programming; now, vibe coding allows the creation of complex programs--albeit, not fully the programs that their creators always intend--without learning any code at all.</p>
+
+  <p>For the entirety of the history of computer programming, up until a few years ago, simple programs and novice programming knowledge came together in an elegant bundle. Want to make a virtual pet game, that works the way you want? You might find a tutorial, but you'll have to code it yourself. This provided an on-ramp to coding knowledge for millions of learners, and motivation to make the ascent.</p>
+
+  <p>That this no longer holds presents several problems, but also opportunities. One problem is that people who wish to create the virtual pet game may never learn to code. Another problem is that AI-assisted coding is much more powerful if you have coding knowledge to supplement it, either in making larger projects beyond any single context window, or in more productive iteration along the way.</p>
+
+  <h3>Access to computational composition</h3>
+
+  <p>As for the opportunities, I see several. One is in the capturing and manipulation of context, along the lines of the hidden prompts in Claude Code that I found. Systems of rules and understandings, from team agreements to organizational standards to procedural conventions to personal philosophies, can be ambiently captured and made visible and even editable, for all sorts of uses. Picture a self-assembling compilation of best practices for a team, that can give team members a heads up when they're broken, but which can also be adjusted when it's off-base.</p>
+  
+  <p>I suspect this surfacing of procedure may provide for a wide democratization of code, at least of a sort. Programmers often draft logical steps in "pseudocode", human-readable steps that cannot be actually executed by a computer, since they are not in a coding language. But now pseudocode, and other intermediary forms of computational logic, can be manipulated and run in their own right. I can imagine, say, conference organizers setting up rules so that attendees who check in are emailed a schedule, which is truncated to exclude events in the past. Instead of using someone else's software for this--and being unexpectedly stuck with its assumptions--such knowledge workers might increasingly create their own, and get used to modifying its rules.</p>
+
+  <p>And then there's the opportunity of the unknown. In such a time of fast-changing technological power, it's hard to see our way around the corner to what these changes will ultimately enable. These changes come with immense risks and costs. But even if the net result of this path is damaging, there will be positive experiences that were not possible before, forms of empowerment and expressive exploration that we don't yet even understand enough to imagine.</p>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
 
     <!-- Repeat blocks for other versions -->
 
@@ -290,3 +399,5 @@ internal understanding shows in its handoffs; but that is currently not exposed.
     </div>
   </body>
 </html>
+
+
